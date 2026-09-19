@@ -1,165 +1,33 @@
 <!doctype html>
-<html lang="az">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#08111f" />
-  <meta name="description" content="Nibras Code — sadə, faydalı və müasir mobil tətbiqlər." />
-  <meta property="og:title" content="Nibras Code" />
-  <meta property="og:description" content="Sadə ideyalar. Faydalı tətbiqlər. Rahat texnologiya." />
-  <meta property="og:type" content="website" />
-  <title>Nibras Code — Rahat texnologiya</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="manifest" href="site.webmanifest" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="noise" aria-hidden="true"></div>
-  <canvas id="motion-canvas" aria-hidden="true"></canvas>
-  <div class="cursor-glow" aria-hidden="true"></div>
-  <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="Nibras Code ana səhifə">
-      <img class="brand-logo" src="nibras-logo.jpg" alt="Nibras Code loqosu" />
-      <span class="brand-name">Nibras <b>Code</b></span>
-    </a>
-    <button class="menu-button" aria-expanded="false" aria-controls="site-nav" aria-label="Menyunu aç">
-      <span></span><span></span>
-    </button>
-    <nav id="site-nav" aria-label="Əsas menyu">
-      <a href="#apps">Tətbiqlər</a>
-      <a href="#about">Haqqımızda</a>
-      <a href="#values">Dəyərlər</a>
-      <a href="#approach">Yanaşma</a>
-      <a class="nav-cta" href="#vision">Məqsədimiz</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero hero-live section-pad">
-      <div class="aurora aurora-a" aria-hidden="true"></div>
-      <div class="aurora aurora-b" aria-hidden="true"></div>
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><span></span> Mobil tətbiqlər studiyası</p>
-        <h1>Texnologiya.<br><span>Sadə olanda</span><br>daha güclüdür.</h1>
-        <p class="hero-text">Gündəlik ehtiyaclar üçün düşünülmüş, rahat istifadə edilən və müasir görünən tətbiqlər.</p>
-        <div class="hero-actions">
-          <a class="button primary magnetic" href="#apps">Tətbiqləri kəşf et <span>↓</span></a>
-          <a class="button ghost" href="#about">Nibras Code nədir?</a>
-        </div>
-        <div class="live-status"><i></i><span>Sadə ideyalar. Real fayda.</span></div>
-      </div>
-      <div class="orbital-stage four-app-stage reveal" aria-label="Nibras Code tətbiqləri">
-        <div class="app-halo" aria-hidden="true"></div>
-        <a class="hero-app hero-app-1" href="pdf-tools.html">
-          <img src="nibras-pdf-icon.png" alt="Nibras PDF Tools tətbiq ikonu">
-          <span>Nibras PDF</span>
-        </a>
-        <a class="hero-app hero-app-2" href="plans.html">
-          <img src="nibras-plans.jpg" alt="Nibras Plans tətbiq ikonu">
-          <span>Nibras Plans</span>
-        </a>
-        <a class="hero-app hero-app-3" href="arabic.html">
-          <img src="nibras-arabic-icon.jpg" alt="Nibras Arabic tətbiq ikonu">
-          <span>Nibras Arabic</span>
-        </a>
-        <a class="hero-app hero-app-4" href="docs.html">
-          <img src="b7c8f687-0142-455b-9d2d-4f9b3b19f58a__2_-1789309184322.jpg" alt="Nibras Docs tətbiq ikonu">
-          <span>Nibras Docs</span>
-        </a>
-        <div class="stage-brand" aria-hidden="true"><img src="nibras-logo.jpg" alt=""></div>
-      </div>
-      <div class="scroll-hint"><span>SCROLL</span><i></i></div>
-    </section>
-
-    <section class="marquee" aria-label="Dəyərlər">
-      <div class="marquee-track">
-        <span>Sadəlik <i>✦</i> Fayda <i>✦</i> Keyfiyyət <i>✦</i> Rahatlıq <i>✦</i> Müasirlik <i>✦</i></span>
-        <span aria-hidden="true">Sadəlik <i>✦</i> Fayda <i>✦</i> Keyfiyyət <i>✦</i> Rahatlıq <i>✦</i> Müasirlik <i>✦</i></span>
-      </div>
-    </section>
-
-
-    <section class="apps section-pad" id="apps">
-      <div class="section-number reveal">01 / TƏTBİQLƏRİMİZ</div>
-      <div class="apps-heading reveal">
-        <h2>Sadə hazırlanıb.<br><span>Fayda üçün qurulub.</span></h2>
-        <p>Ətraflı məlumat üçün tətbiqin üzərinə toxunun.</p>
-      </div>
-      <div class="app-grid">
-        <a class="app-card reveal" href="pdf-tools.html">
-          <img src="nibras-pdf-icon.png" alt="Nibras PDF Tools tətbiq ikonu" />
-          <div><span>Sənəd alətləri</span><h3>Nibras PDF Tools</h3><p>PDF faylları üçün rahat və sadə alətlər.</p></div><b>↗</b>
-        </a>
-        <a class="app-card reveal" href="plans.html">
-          <img src="nibras-plans.jpg" alt="Nibras Plans tətbiq ikonu" />
-          <div><span>Planlaşdırma</span><h3>Nibras Plans</h3><p>Planları aydın şəkildə qurmaq və izləmək üçün.</p></div><b>↗</b>
-        </a>
-        <a class="app-card reveal" href="arabic.html">
-          <img src="nibras-arabic-icon.jpg" alt="Nibras Arabic tətbiq ikonu" />
-          <div><span>Öyrənmə</span><h3>Nibras Arabic</h3><p>Ərəb dili öyrənməsini daha rahat edən tətbiq.</p></div><b>↗</b>
-        </a>
-        <a class="app-card reveal" href="docs.html">
-          <img src="b7c8f687-0142-455b-9d2d-4f9b3b19f58a__2_-1789309184322.jpg" alt="Nibras Docs tətbiq ikonu" />
-          <div><span>Sənədlər</span><h3>Nibras Docs</h3><p>Sənədləri idarə etmək üçün müasir iş sahəsi.</p></div><b>↗</b>
-        </a>
-      </div>
-    </section>
-
-    <section class="about section-pad" id="about">
-      <div class="section-number reveal">02 / BİZ KİMİK</div>
-      <div class="about-grid">
-        <h2 class="reveal">Texnologiya sizi<br><span>yormamalıdır.</span></h2>
-        <div class="about-copy reveal">
-          <p>Nibras Code insanların gündəlik ehtiyaclarını daha rahat həll edən sadə, faydalı və müasir mobil tətbiqlər hazırlayan texnologiya brendidir.</p>
-          <p>Bizim yanaşmamız sadədir: tətbiqlərimizi aydın interfeys, rahat istifadə və həqiqətən lazım olan funksiyalar üzərində qururuq.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="values section-pad" id="values">
-      <div class="section-number reveal">03 / BİZ NƏYƏ İNANIRIQ?</div>
-      <div class="section-heading reveal">
-        <h2>Dəyər funksiya sayında deyil,<br><span>real faydadadır.</span></h2>
-      </div>
-      <div class="value-grid">
-        <article class="value-card reveal"><span>01</span><div class="icon">◎</div><h3>Asan istifadə</h3><p>İlk baxışdan anlaşılan, rahat və aydın tətbiqlər hazırlayırıq.</p></article>
-        <article class="value-card reveal"><span>02</span><div class="icon">◇</div><h3>Düzgün seçim</h3><p>Lazımsız funksiyalardan uzaq durur, əsas ehtiyaca fokuslanırıq.</p></article>
-        <article class="value-card reveal"><span>03</span><div class="icon">✦</div><h3>Premium görünüş</h3><p>Müasir, səliqəli və etibar yaradan məhsul təcrübəsi qururuq.</p></article>
-        <article class="value-card reveal"><span>04</span><div class="icon">↗</div><h3>Daimi inkişaf</h3><p>İstifadəçi rəylərini dinləyir və məhsullarımızı yaxşılaşdırırıq.</p></article>
-        <article class="value-card reveal"><span>05</span><div class="icon">⌁</div><h3>Real ehtiyac</h3><p>Tətbiqlərimizi gündəlik həyatda qarşılaşılan ehtiyaclar əsasında formalaşdırırıq.</p></article>
-        <article class="value-card reveal"><span>06</span><div class="icon">◉</div><h3>Əlçatan keyfiyyət</h3><p>Keyfiyyətli məhsulları münasib qiymətlərlə təqdim etməyə çalışırıq.</p></article>
-      </div>
-    </section>
-
-    <section class="approach section-pad" id="approach">
-      <div class="approach-copy reveal">
-        <div class="section-number">04 / NİBRAS CODE YANAŞMASI</div>
-        <h2>Daha sadə.<br><span>Daha faydalı.</span></h2>
-        <p>Hər qərarın mərkəzində istifadəçi və onun real ehtiyacı dayanır.</p>
-      </div>
-      <div class="principles">
-        <div class="principle reveal"><span>01</span><p><s>Çox funksiya</s><strong>Doğru funksiyalar</strong></p></div>
-        <div class="principle reveal"><span>02</span><p><s>Mürəkkəblik</s><strong>Sadəlik</strong></p></div>
-        <div class="principle reveal"><span>03</span><p><s>Sadəcə görünüş</s><strong>Real fayda</strong></p></div>
-        <div class="principle reveal"><span>04</span><p><s>Sadəcə satış</s><strong>İstifadəçi məmnuniyyəti</strong></p></div>
-      </div>
-    </section>
-
-    <section class="vision section-pad" id="vision">
-      <div class="vision-inner reveal">
-        <p class="eyebrow"><span></span> MƏQSƏDİMİZ</p>
-        <h2>Telefonunuzda yer almağa<br><span>dəyən tətbiqlər.</span></h2>
-        <p>Hər kəsin asanlıqla istifadə edə biləcəyi, gündəlik həyatda həqiqətən işə yarayan tətbiqlər yaratmaq istəyirik.</p>
-        <a class="button light" href="#top">Nibras Code-u kəşf et <span>↑</span></a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-brand"><img class="brand-logo" src="nibras-logo.jpg" alt="Nibras Code loqosu" /><span>Nibras <b>Code</b></span></div>
-    <p>Texnologiyanı daha sadə və daha faydalı etmək üçün.</p>
-    <div class="footer-bottom"><span>© <span id="year"></span> Nibras Code</span><a href="#top">Yuxarı qayıt ↑</a></div>
-  </footer>
-  <script src="script.js"></script>
-</body>
-</html>
+<html lang="az"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07101d">
+<meta name="description" content="Nibras Code — sadə ideyalar, faydalı tətbiqlər."><title>Nibras Code</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+</head><body class="premium-home">
+<canvas id="motion-canvas" aria-hidden="true"></canvas><div class="cursor-glow" aria-hidden="true"></div>
+<header class="minimal-header">
+<a class="brand" href="index.html"><img class="brand-logo" src="nibras-logo.jpg" alt="Nibras Code loqosu"><span class="brand-name">Nibras <b>Code</b></span></a>
+<nav class="minimal-nav"><a href="about.html">Haqqımızda</a><a href="#apps">Tətbiqlər</a></nav>
+<button class="menu-button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menyunu aç"><span></span><span></span></button>
+<div id="mobile-nav" class="mobile-nav"><a href="about.html">Haqqımızda</a><a href="#apps">Tətbiqlər</a></div>
+</header>
+<main>
+<section class="premium-hero">
+<div class="hero-message">
+<p class="mini-kicker"><i></i>NIBRAS CODE</p>
+<h1>Sadə ideyalar.<br><span>Faydalı tətbiqlər.</span></h1>
+<p>Rahat texnologiya.</p>
+<a class="explore-link" href="#apps">Tətbiqləri kəşf et <b>↓</b></a>
+</div>
+<div class="premium-showcase" id="apps" aria-label="Nibras Code tətbiqləri">
+<div class="showcase-glow"></div>
+<a class="premium-app pa-1" href="pdf-tools.html"><img src="nibras-pdf-icon.png" alt="Nibras PDF Tools"><span>Nibras PDF</span></a>
+<a class="premium-app pa-2" href="plans.html"><img src="nibras-plans.jpg" alt="Nibras Plans"><span>Nibras Plans</span></a>
+<a class="premium-app pa-3" href="arabic.html"><img src="nibras-arabic-icon.jpg" alt="Nibras Arabic"><span>Nibras Arabic</span></a>
+<a class="premium-app pa-4" href="docs.html"><img src="b7c8f687-0142-455b-9d2d-4f9b3b19f58a__2_-1789309184322.jpg" alt="Nibras Docs"><span>Nibras Docs</span></a>
+<div class="showcase-logo"><img src="nibras-logo.jpg" alt=""></div>
+</div>
+</section>
+</main>
+<footer class="minimal-footer"><span>© <b id="year"></b> Nibras Code</span><a href="about.html">Brend haqqında →</a></footer>
+<script src="script.js"></script></body></html>
