@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, BookOpen, Languages, PanelsTopLeft, Timer } from "lucide-react";
-import { PhoneMock } from "@/components/phone-mock";
+import { APP_SCREENS, PhoneMock } from "@/components/phone-mock";
 import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n-context";
@@ -60,6 +60,33 @@ function NibrasArabicPage() {
             <PhoneMock />
           </div>
         </div>
+      </section>
+
+      <section className="section scroll-mt-24 pt-16">
+        <Reveal>
+          <div className="section-head">
+            <div>
+              <div className="eyebrow">
+                <i />
+                {t("screens_eyebrow")}
+              </div>
+              <h2>
+                {t("screens_h2_lead")} <em>{t("screens_h2_em")}</em>
+              </h2>
+            </div>
+            <p>{t("screens_desc")}</p>
+          </div>
+        </Reveal>
+        <Reveal>
+          <div className="screen-gallery">
+            {APP_SCREENS.map((shot, idx) => (
+              <figure key={shot.src} className="screen-card">
+                <PhoneMock screen={idx} className="is-sm" />
+                <figcaption>{t(shot.altKey)}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </Reveal>
       </section>
 
       <section className="section">

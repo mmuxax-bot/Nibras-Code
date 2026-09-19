@@ -1,78 +1,80 @@
 import { useEffect, useState } from "react";
-import { ArrowUpRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n-context";
+import type { TKey } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
-const LETTERS = [
-  { ar: "ا", la: "Alif", ipa: "ā" },
-  { ar: "ب", la: "Bā", ipa: "b" },
-  { ar: "ت", la: "Tā", ipa: "t" },
-  { ar: "ث", la: "Thā", ipa: "th" },
-  { ar: "ن", la: "Nūn", ipa: "n" },
-] as const;
+export const APP_SCREENS: ReadonlyArray<{ src: string; altKey: TKey }> = [
+  { src: "/screens/splash.jpg", altKey: "screen_splash" },
+  { src: "/screens/home.jpg", altKey: "screen_home" },
+  { src: "/screens/learn.jpg", altKey: "screen_learn" },
+  { src: "/screens/verb.jpg", altKey: "screen_verb" },
+];
 
-export function PhoneMock({ className }: { className?: string }) {
+export function PhoneMock({
+  className,
+  screen,
+}: {
+  className?: string;
+  screen?: number;
+}) {
   const { t } = useI18n();
-  const [i, setI] = useState(0);
-  const letter = LETTERS[i] ?? LETTERS[0];
+  const pinned = typeof screen === "number";
+  const [i, setI] = useState(() => (pinned ? screen : 0));
+  const active = APP_SCREENS[i] ?? APP_SCREENS[0];
 
   useEffect(() => {
+    if (pinned) {
+      setI(screen);
+      return;
+    }
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) return;
     const id = window.setInterval(() => {
-      setI((n) => (n + 1) % LETTERS.length);
-    }, 2400);
+      setI((n) => (n + 1) % APP_SCREENS.length);
+    }, 2800);
     return () => window.clearInterval(id);
-  }, []);
+  }, [pinned, screen]);
 
   return (
-    <div className={cn("phone-shell", className)}>
+    <div className={cn("phone-shell", pinned && "is-pinned", className)}>
       <div className="phone-bezel">
         <div className="phone-notch" />
         <div className="phone-screen">
-          <div className="flex items-center justify-between px-4 pt-7 text-micro font-semibold tracking-widest text-muted">
-            <span>NIBRAS</span>
-            <span className="tabular-nums">9:41</span>
-          </div>
-          <div className="mt-5 px-4">
-            <p className="text-micro font-bold tracking-[0.22em] text-ice/80">
-              {t("app_lesson")}
-            </p>
-            <div className="letter-stage mt-3">
-              <span key={letter.ar} className="letter-glyph">
-                {letter.ar}
-              </span>
-            </div>
-            <div className="mt-2 flex items-end justify-between">
-              <div>
-                <p className="font-display text-lg font-semibold text-fg">{letter.la}</p>
-                <p className="text-xs text-muted">{letter.ipa}</p>
-              </div>
-              <div className="flex gap-1">
-                {LETTERS.map((item, idx) => (
-                  <span
-                    key={item.ar}
-                    className={cn(
-                      "h-1 w-4 rounded-full",
-                      idx === i ? "bg-ice" : "bg-white/15",
-                    )}
-                  />
-                ))}
-              </div>
-            </div>
-            <div className="mt-5 h-1 overflow-hidden rounded-full bg-white/10">
-              <div
-                className="h-full rounded-full bg-linear-to-r from-brand to-ice"
-                style={{ width: `${((i + 1) / LETTERS.length) * 100}%` }}
+          {pinned ? (
+            <img
+              src={active.src}
+              alt={t(active.altKey)}
+              className="phone-shot is-active"
+              width={720}
+              height={1452}
+              loading="lazy"
+              draggable={false}
+            />
+          ) : (
+            APP_SCREENS.map((shot, idx) => (
+              <img
+                key={shot.src}
+                src={shot.src}
+                alt=""
+                className={cn("phone-shot", idx === i && "is-active")}
+                width={720}
+                height={1452}
+                draggable={false}
               />
-            </div>
-            <div className="mt-5 flex h-11 w-full items-center justify-center gap-2 rounded-2xl bg-fg text-2xs font-bold tracking-widest text-ink uppercase">
-              {t("app_next")}
-              <ArrowUpRight className="size-3.5" />
-            </div>
-          </div>
+            ))
+          )}
         </div>
       </div>
+      {!pinned ? (
+        <div className="phone-dots" aria-hidden="true">
+          {APP_SCREENS.map((shot, idx) => (
+            <span
+              key={shot.src}
+              className={cn("phone-dot", idx === i && "is-on")}
+            />
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 }
