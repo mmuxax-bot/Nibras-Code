@@ -604,10 +604,9 @@ html[dir="rtl"] .marquee-track {
 
 .featured-visual {
   position: relative;
-  min-height: 520px;
+  min-height: 420px;
   display: grid;
   place-items: center;
-  padding: 28px 16px 22px;
   background:
     radial-gradient(circle at 70% 40%, rgb(109 132 255 / 0.22), transparent 42%),
     radial-gradient(circle at 30% 80%, rgb(126 231 255 / 0.1), transparent 40%),
@@ -807,11 +806,7 @@ html[dir="rtl"] .marquee-track {
 /* Phone */
 .phone-shell {
   position: relative;
-  width: 248px;
-}
-
-.phone-shell.is-sm {
-  width: 176px;
+  width: 230px;
 }
 
 .phone-bezel {
@@ -824,109 +819,34 @@ html[dir="rtl"] .marquee-track {
     0 0 0 1px rgb(255 255 255 / 0.08);
 }
 
-.phone-shell.is-sm .phone-bezel {
-  border-radius: 28px;
-  padding: 8px;
-}
-
 .phone-notch {
   position: absolute;
   top: 16px;
   left: 50%;
   z-index: 2;
-  width: 72px;
-  height: 14px;
+  width: 86px;
+  height: 18px;
   transform: translateX(-50%);
   border-radius: 999px;
   background: #05060c;
 }
 
-.phone-shell.is-sm .phone-notch {
-  top: 12px;
-  width: 52px;
-  height: 10px;
-}
-
 .phone-screen {
-  position: relative;
-  isolation: isolate;
-  aspect-ratio: 720 / 1452;
-  border-radius: 26px;
-  background: #071018;
+  min-height: 430px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 70% 20%, rgb(109 132 255 / 0.22), transparent 40%),
+    #090b14;
   overflow: hidden;
-  transform: translateZ(0);
-}
-
-.phone-shell.is-sm .phone-screen {
-  border-radius: 20px;
-}
-
-.phone-shot {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  opacity: 0;
-  outline: none;
-  pointer-events: none;
-  transition-property: opacity;
-  transition-duration: 500ms;
-  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.phone-shot.is-active {
-  opacity: 1;
-}
-
-.phone-dots {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 12px;
-}
-
-.phone-dot {
-  display: block;
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
-  background: rgb(255 255 255 / 0.18);
-  transition-property: width, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.phone-dot.is-on {
-  width: 18px;
-  background: var(--color-ice);
-}
-
-.screen-gallery {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-  justify-items: center;
-}
-
-.screen-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-.screen-card figcaption {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-muted);
 }
 
 .letter-stage {
-  display: none;
+  display: grid;
+  place-items: center;
+  height: 148px;
+  border-radius: 22px;
+  background: rgb(255 255 255 / 0.04);
+  border: 1px solid rgb(255 255 255 / 0.08);
 }
 
 .letter-glyph {
@@ -1189,22 +1109,7 @@ html[dir="rtl"] .rtl-flip {
   }
 
   .featured-visual {
-    min-height: 500px;
-    padding-top: 20px;
-  }
-
-  .screen-gallery {
-    display: flex;
-    overflow-x: auto;
-    gap: 16px;
-    padding-bottom: 8px;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .screen-card {
-    flex: 0 0 auto;
-    scroll-snap-align: center;
+    min-height: 380px;
   }
 
   .about-label {
@@ -1251,13 +1156,8 @@ html[dir="rtl"] .rtl-flip {
   .marquee-track,
   .hero-accent,
   .letter-glyph,
-  .live-dot,
-  .phone-shot {
+  .live-dot {
     animation: none !important;
-  }
-
-  .phone-shot {
-    transition: none;
   }
 
   .reveal {
