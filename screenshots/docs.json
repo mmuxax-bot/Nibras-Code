@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/apps/nibras-docs",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Nibras Code",
+      "hasCanvas": false,
+      "bodyTextLen": 396,
+      "bodyTextHash": "e8b9350507ab073f07d9bd445800a9190ea5b83b07685554d969f3e65b4c8eec",
+      "bodyTextPrefix": "NIBRAS CODE Tətbiqlər Sənətkarlıq Haqqımızda AZ EN AR RU KƏŞF ET",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/docs.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Nibras Code",
+      "hasCanvas": false,
+      "bodyTextLen": 396,
+      "bodyTextHash": "6258848a441ba34aaad0d5e907296528088223f345dec96e1e4208a8047b966a",
+      "bodyTextPrefix": "NIBRAS CODE AZ EN AR RU Tətbiqlər Sənətkarlıq Haqqımızda KƏŞF ET",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/docs-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/docs.json"
+}

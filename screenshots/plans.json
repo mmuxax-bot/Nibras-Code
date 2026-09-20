@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/apps/nibras-plans",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Nibras Code",
+      "hasCanvas": false,
+      "bodyTextLen": 380,
+      "bodyTextHash": "8140f22b16513f721040509cd2fb8e6e763834563b793ed3c0ed0703c26af0fd",
+      "bodyTextPrefix": "NIBRAS CODE Tətbiqlər Sənətkarlıq Haqqımızda AZ EN AR RU KƏŞF ET",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/plans.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Nibras Code",
+      "hasCanvas": false,
+      "bodyTextLen": 380,
+      "bodyTextHash": "57af27fca0847a3f903bb372de0d4ab26b163eee313b670fd029cf54698dbb2b",
+      "bodyTextPrefix": "NIBRAS CODE AZ EN AR RU Tətbiqlər Sənətkarlıq Haqqımızda KƏŞF ET",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/plans-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/plans.json"
+}
